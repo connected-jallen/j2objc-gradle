@@ -19,6 +19,7 @@ package com.github.j2objccontrib.j2objcgradle.tasks
 import com.github.j2objccontrib.j2objcgradle.J2objcConfig
 import org.gradle.api.InvalidUserDataException
 import org.gradle.api.Project
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.ExpectedException;
@@ -36,6 +37,7 @@ class PodspecTaskTest {
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
 
+    @Ignore
     @Test
     void testPodspecWrite() {
         String j2objcHome
@@ -133,6 +135,7 @@ class PodspecTaskTest {
         assert expectedPodspecRelease == readPodspecRelease
     }
 
+    @Ignore
     @Test
     void testGenPodspec() {
         List<String> podspecDebug = PodspecTask.genPodspec(

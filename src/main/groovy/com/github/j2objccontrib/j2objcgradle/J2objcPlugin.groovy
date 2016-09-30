@@ -176,7 +176,7 @@ class J2objcPlugin implements Plugin<Project> {
                 // This transitively depends on the 'test' task from the java plugin
                 description 'Runs all tests in the generated Objective-C code'
                 buildType = 'Debug'
-                testBinaryFile = file("${buildDir}/binaries/testJ2objcExecutable/debug/testJ2objc")
+//                testBinaryFile = file("${buildDir}/binaries/testJ2objcExecutable/debug/testJ2objc")
             }
             tasks.create(name: 'j2objcTestRelease', type: TestTask,
                     dependsOn: ['test', 'releaseTestJ2objcExecutable']) {
@@ -184,7 +184,7 @@ class J2objcPlugin implements Plugin<Project> {
                 // This transitively depends on the 'test' task from the java plugin
                 description 'Runs all tests in the generated Objective-C code'
                 buildType = 'Release'
-                testBinaryFile = file("${buildDir}/binaries/testJ2objcExecutable/release/testJ2objc")
+//                testBinaryFile = file("${buildDir}/binaries/testJ2objcExecutable/release/testJ2objc")
             }
             // If both release and debug tests would run, run the debug tests first - ideally
             // the failure messages will be easier to understand (ex. Java line numbers).
